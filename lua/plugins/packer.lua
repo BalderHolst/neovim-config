@@ -29,7 +29,7 @@ return require('packer').startup(function(use)
     use "sainnhe/sonokai"
     use "folke/tokyonight.nvim"
     use { 'Everblush/everblush.nvim', as = 'everblush' }
-    use({ 'rose-pine/neovim', as = 'rose-pine' })
+    use { 'rose-pine/neovim', as = 'rose-pine' }
 
     -- Misc
     use 'tpope/vim-commentary' -- comment out lines with gcc and gc
@@ -37,6 +37,7 @@ return require('packer').startup(function(use)
     use 'https://github.com/norcalli/nvim-colorizer.lua' -- preview colors
     use 'folke/zen-mode.nvim'
     use 'lewis6991/gitsigns.nvim' -- Git symbols
+    use 'epwalsh/obsidian.nvim' -- Obsidian notes
     -- use 'theprimeagen/harpoon'
     -- use 'junegunn/goyo.vim' -- Center and hide tui
     -- use 'oberblastmeister/neuron.nvim'

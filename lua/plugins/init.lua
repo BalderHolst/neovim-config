@@ -6,7 +6,7 @@ require("plugins.treesitter-context")
 
 require("plugins.telescope")
 require("plugins.lsp")
--- require("plugins.cmp")
+require("plugins.cmp")
 require("plugins.autopairs")
 require("plugins.luasnip")
 -- require("plugins.project")
@@ -17,6 +17,7 @@ require("plugins.mdeval")
 require("plugins.colorizer")
 require("plugins.zen-mode")
 require("plugins.gitsigns")
+require("plugins.obsidian")
 
 -- Languages
 require("plugins.flutter-tools").setup()

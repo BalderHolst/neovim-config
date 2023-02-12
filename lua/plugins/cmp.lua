@@ -124,8 +124,8 @@ sources = {
 	-- { name = "cmdline" },
 },
 window = {
-	completion = cmp.config.window.bordered(),
-	documentation = cmp.config.window.bordered(),
+	-- completion = cmp.config.window.bordered(),
+	-- documentation = cmp.config.window.bordered(),
 },
 confirm_opts = {
 	behavior = cmp.ConfirmBehavior.Replace,

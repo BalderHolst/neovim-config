@@ -1,4 +1,5 @@
 local lsp = require("lsp-zero")
+local lspconfig = require("lspconfig")
 
 lsp.preset("recommended")
 
@@ -8,12 +9,12 @@ lsp.ensure_installed({
     'pyright',
 })
 
--- Fix Undefined global 'vim'
-lsp.configure('sumneko_lua', {
+
+lsp.configure('lua_ls', {
     settings = {
         Lua = {
             diagnostics = {
-                globals = { 'vim' }
+                globals = { 'vim' } -- Fix Undefined global 'vim'
             }
         }
     }

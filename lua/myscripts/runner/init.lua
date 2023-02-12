@@ -60,6 +60,16 @@ M.start = function()
         end
     })
 
+    -- Python
+    vim.api.nvim_create_autocmd("BufWritePost", {
+        group = vim.api.nvim_create_augroup("runner", { clear = false }),
+        pattern = "*\\.cpp",
+        callback = function()
+            M.run_command({ "g++", "-o \"out\"", filename})
+            -- M.run_command({ "./out" })
+        end
+    })
+
     -- latex
     -- vim.api.nvim_create_autocmd("BufWritePost", {
     -- 	group = vim.api.nvim_create_augroup("runner", {clear = true}),
