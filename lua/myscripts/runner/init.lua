@@ -65,19 +65,10 @@ M.start = function()
         group = vim.api.nvim_create_augroup("runner", { clear = false }),
         pattern = "*\\.cpp",
         callback = function()
-            M.run_command({ "g++", "-o \"out\"", filename})
+            M.run_command({ "make" })
             -- M.run_command({ "./out" })
         end
     })
-
-    -- latex
-    -- vim.api.nvim_create_autocmd("BufWritePost", {
-    -- 	group = vim.api.nvim_create_augroup("runner", {clear = true}),
-    -- 	pattern = "*.tex",
-    -- 	callback = function ()
-    -- 		M.run_command({"clatex"})
-    -- 	end
-    -- })
 
     -- Arduino
     vim.api.nvim_create_autocmd("BufWritePost", {
