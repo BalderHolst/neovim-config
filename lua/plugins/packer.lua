@@ -38,6 +38,7 @@ return require('packer').startup(function(use)
     use 'folke/zen-mode.nvim'
     use 'lewis6991/gitsigns.nvim' -- Git symbols
     use 'epwalsh/obsidian.nvim' -- Obsidian notes
+    use 'hkupty/iron.nvim'
     -- use 'theprimeagen/harpoon'
     -- use 'junegunn/goyo.vim' -- Center and hide tui
     -- use 'oberblastmeister/neuron.nvim'

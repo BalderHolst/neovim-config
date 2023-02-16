@@ -134,6 +134,11 @@ _G.packer_plugins = {
     path = "/home/balder/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
     url = "https://github.com/ellisonleao/gruvbox.nvim"
   },
+  ["iron.nvim"] = {
+    loaded = true,
+    path = "/home/balder/.local/share/nvim/site/pack/packer/start/iron.nvim",
+    url = "https://github.com/hkupty/iron.nvim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/balder/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
