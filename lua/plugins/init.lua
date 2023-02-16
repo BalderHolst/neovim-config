@@ -18,7 +18,7 @@ require("plugins.mdeval")
 require("plugins.colorizer")
 require("plugins.zen-mode")
 require("plugins.gitsigns")
-require("plugins.obsidian")
+-- require("plugins.obsidian")
 
 -- Languages
 require("plugins.flutter-tools").setup()
