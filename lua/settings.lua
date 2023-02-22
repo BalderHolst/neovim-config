@@ -35,6 +35,7 @@ vim.opt.splitright = true
 vim.opt.number = true -- enable numbering
 
 vim.opt.smarttab = true
+vim.opt.smartindent = true
 
 -- netrw
 vim.g.netrw_browse_split = 0
@@ -53,15 +54,11 @@ vim.opt.relativenumber = true
 
 vim.opt.wrap = false
 
--- Auto cmd
 cmd('au InsertEnter * norm zz')
--- cmd('set path+=**')
 
 
 -- Filetypes
 vim.api.nvim_create_autocmd("BufWinEnter", { pattern = "*.dart" , command = "set filetype=dart" })
-
-
 
 vim.g.markdown_fenced_languages = {'python', 'cpp'} -- enable highlighting for these languages in markdown files.
 
