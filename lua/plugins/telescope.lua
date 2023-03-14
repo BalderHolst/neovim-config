@@ -82,3 +82,5 @@ vim.keymap.set('n', 'fb', function() extensions.file_browser.file_browser() end)
 
 vim.keymap.set('n', '<C-p>', builtin.git_files, {})
 vim.keymap.set('n', '<Leader>/', function() builtin.grep_string({ search = vim.fn.input("Grep > ") }) end)
+vim.keymap.set('n', 'z=', function() builtin.spell_suggest() end)
+

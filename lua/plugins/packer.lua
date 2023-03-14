@@ -91,6 +91,7 @@ return require('packer').startup(function(use)
     use 'dart-lang/dart-vim-plugin' -- Dart
     use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' } -- Flutter
     use 'https://github.com/jubnzv/mdeval.nvim' -- markdown code blocks
+    use 'ixru/nvim-markdown'
     -- use 'thosakwe/vim-flutter' -- Flutter
     -- use { "vlelo/arduino-helper.nvim" } -- Arduino (requires arduino-cli)
     use "https://github.com/stevearc/vim-arduino"

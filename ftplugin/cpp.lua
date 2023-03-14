@@ -5,5 +5,5 @@ local opts = { noremap = true }
 
 
 -- mappings
-map('n', 'å', ':w | !g++ % -o out && ./out <cr>', opts) -- run
+map('n', 'å', ':w | !g++ *.cpp && ./a.out <cr>', opts) -- run
 
