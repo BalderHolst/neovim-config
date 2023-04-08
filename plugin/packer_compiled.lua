@@ -134,11 +134,6 @@ _G.packer_plugins = {
     path = "/home/balder/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
     url = "https://github.com/ellisonleao/gruvbox.nvim"
   },
-  ["iron.nvim"] = {
-    loaded = true,
-    path = "/home/balder/.local/share/nvim/site/pack/packer/start/iron.nvim",
-    url = "https://github.com/hkupty/iron.nvim"
-  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/balder/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -168,6 +163,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/balder/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
     url = "https://github.com/EdenEast/nightfox.nvim"
+  },
+  ["nvim-align"] = {
+    loaded = true,
+    path = "/home/balder/.local/share/nvim/site/pack/packer/start/nvim-align",
+    url = "https://github.com/RRethy/nvim-align"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -228,6 +228,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/balder/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
+  },
+  ["rust-tools.nvim"] = {
+    loaded = true,
+    path = "/home/balder/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
+    url = "https://github.com/simrat39/rust-tools.nvim"
   },
   sonokai = {
     loaded = true,

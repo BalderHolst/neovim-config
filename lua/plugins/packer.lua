@@ -38,7 +38,8 @@ return require('packer').startup(function(use)
     use 'folke/zen-mode.nvim'
     use 'lewis6991/gitsigns.nvim' -- Git symbols
     use 'epwalsh/obsidian.nvim' -- Obsidian notes
-    use 'hkupty/iron.nvim'
+    use 'RRethy/nvim-align' -- align things
+    -- use 'hkupty/iron.nvim'
     -- use 'theprimeagen/harpoon'
     -- use 'junegunn/goyo.vim' -- Center and hide tui
     -- use 'oberblastmeister/neuron.nvim'
@@ -88,6 +89,7 @@ return require('packer').startup(function(use)
     }
 
     -- More language Plugins
+    use 'simrat39/rust-tools.nvim' -- rust
     use 'dart-lang/dart-vim-plugin' -- Dart
     use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' } -- Flutter
     use 'https://github.com/jubnzv/mdeval.nvim' -- markdown code blocks
