@@ -40,6 +40,7 @@ return require('packer').startup(function(use)
     use 'tpope/vim-fugitive' -- Awesome git commands
     use 'epwalsh/obsidian.nvim' -- Obsidian notes
     use 'RRethy/nvim-align' -- align things
+    use 'mg979/vim-visual-multi' -- multi-cursor
     -- use 'hkupty/iron.nvim'
     -- use 'theprimeagen/harpoon'
     -- use 'junegunn/goyo.vim' -- Center and hide tui

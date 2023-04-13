@@ -279,6 +279,11 @@ _G.packer_plugins = {
     path = "/home/balder/.local/share/nvim/site/pack/packer/start/vim-moonfly-colors",
     url = "https://github.com/bluz71/vim-moonfly-colors"
   },
+  ["vim-visual-multi"] = {
+    loaded = true,
+    path = "/home/balder/.local/share/nvim/site/pack/packer/start/vim-visual-multi",
+    url = "https://github.com/mg979/vim-visual-multi"
+  },
   ["zen-mode.nvim"] = {
     loaded = true,
     path = "/home/balder/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",

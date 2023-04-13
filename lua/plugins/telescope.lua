@@ -75,10 +75,10 @@ local extensions = telescope.extensions
 -- local themes = require("telescope.themes")
 
 vim.keymap.set('n', '<leader>T', ":Telescope<cr>")
-vim.keymap.set('n', 'ff', function() builtin.find_files() end) -- go to file
-vim.keymap.set('n', 'fv', function() builtin.find_files({ cwd = "~/.config/nvim/" }) end) -- edit config
-vim.keymap.set('n', 'fs', function() builtin.lsp_document_symbols() end) -- edit config
-vim.keymap.set('n', 'fb', function() extensions.file_browser.file_browser() end) -- open file browser
+vim.keymap.set('n', '<leader>ff', function() builtin.find_files() end) -- go to file
+vim.keymap.set('n', '<leader>fv', function() builtin.find_files({ cwd = "~/.config/nvim/" }) end) -- edit config
+vim.keymap.set('n', '<leader>fs', function() builtin.lsp_document_symbols() end) -- edit config
+vim.keymap.set('n', '<leader>fb', function() extensions.file_browser.file_browser() end) -- open file browser
 
 vim.keymap.set('n', '<Leader>/', function() builtin.grep_string({ search = vim.fn.input("Grep > ") }) end)
 vim.keymap.set('n', 'z=', function() builtin.spell_suggest() end)
