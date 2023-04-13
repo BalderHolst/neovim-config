@@ -269,6 +269,11 @@ _G.packer_plugins = {
     path = "/home/balder/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
   },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/home/balder/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
+  },
   ["vim-moonfly-colors"] = {
     loaded = true,
     path = "/home/balder/.local/share/nvim/site/pack/packer/start/vim-moonfly-colors",

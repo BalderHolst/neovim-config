@@ -26,7 +26,6 @@ local options = {
             preview_cutoff = 120,
         },
     },
-
     extensions = {
         fzf = {
             fuzzy = true, -- false will only do exact matching
@@ -75,12 +74,16 @@ local builtin = require("telescope.builtin")
 local extensions = telescope.extensions
 -- local themes = require("telescope.themes")
 
+vim.keymap.set('n', '<leader>T', ":Telescope<cr>")
 vim.keymap.set('n', 'ff', function() builtin.find_files() end) -- go to file
 vim.keymap.set('n', 'fv', function() builtin.find_files({ cwd = "~/.config/nvim/" }) end) -- edit config
 vim.keymap.set('n', 'fs', function() builtin.lsp_document_symbols() end) -- edit config
 vim.keymap.set('n', 'fb', function() extensions.file_browser.file_browser() end) -- open file browser
 
-vim.keymap.set('n', '<C-p>', builtin.git_files, {})
 vim.keymap.set('n', '<Leader>/', function() builtin.grep_string({ search = vim.fn.input("Grep > ") }) end)
 vim.keymap.set('n', 'z=', function() builtin.spell_suggest() end)
 
+vim.keymap.set('n', '<leader>gp', builtin.git_files, {})
+vim.keymap.set('n', '<leader>gc', builtin.git_commits, {})
+vim.keymap.set('n', '<leader>gs', builtin.git_status, {})
+vim.keymap.set('n', '<leader>gb', builtin.git_branches, {})

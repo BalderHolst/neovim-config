@@ -34,7 +34,7 @@ return require('packer').startup(function(use)
     -- Misc
     use 'tpope/vim-commentary' -- comment out lines with gcc and gc
     use 'windwp/nvim-autopairs' -- Autopairs, integrates with both cmp and treesitter
-    use 'https://github.com/norcalli/nvim-colorizer.lua' -- preview colors
+    use 'norcalli/nvim-colorizer.lua' -- preview colors
     use 'folke/zen-mode.nvim'
     use 'lewis6991/gitsigns.nvim' -- Git symbols
     use 'epwalsh/obsidian.nvim' -- Obsidian notes
