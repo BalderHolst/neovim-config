@@ -60,6 +60,15 @@ M.start = function()
         end
     })
 
+    -- Julia
+    vim.api.nvim_create_autocmd("BufWritePost", {
+        group = vim.api.nvim_create_augroup("runner", { clear = false }),
+        pattern = "*\\.jl",
+        callback = function()
+            M.run_command({ "julia", filename })
+        end
+    })
+
     -- cpp
     vim.api.nvim_create_autocmd("BufWritePost", {
         group = vim.api.nvim_create_augroup("runner", { clear = false }),
