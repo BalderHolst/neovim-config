@@ -3,7 +3,7 @@
 
 require "nvim-treesitter.configs".setup {
 
-    ensure_installed = { "help", "markdown", "python", "lua" },
+    ensure_installed = { "markdown", "python", "lua", "rust", "toml" },
     sync_install = false,
     auto_install = true,
 

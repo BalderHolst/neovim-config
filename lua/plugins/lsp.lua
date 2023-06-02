@@ -93,6 +93,8 @@ lsp.on_attach(function(client, bufnr)
         return
     end
 
+    print("attached to "..client.name.."!")
+
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
     vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
     vim.keymap.set("n", "<leader>vws", vim.lsp.buf.workspace_symbol, opts)
