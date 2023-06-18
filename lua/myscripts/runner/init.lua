@@ -8,8 +8,8 @@ local function setup_out()
     local code_win = vim.api.nvim_get_current_win()
     vim.cmd("vsplit") -- spilt vertically
 
-    local out_win = vim.api.nvim_get_current_win()
-    local out_buf = vim.api.nvim_create_buf(true, true)
+    out_win = vim.api.nvim_get_current_win()
+    out_buf = vim.api.nvim_create_buf(true, true)
     vim.api.nvim_win_set_buf(out_win, out_buf) -- sets the content op the split to be the new buffer
     -- vim.api.nvim_buf_set_name(out_buf, "output")
     vim.api.nvim_win_set_width(out_win, 70) -- Sets the width
