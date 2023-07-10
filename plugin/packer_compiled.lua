@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["LanguageClient-neovim"] = {
+    loaded = true,
+    path = "/home/balder/.local/share/nvim/site/pack/packer/start/LanguageClient-neovim",
+    url = "https://github.com/autozimu/LanguageClient-neovim"
+  },
   LuaSnip = {
     loaded = true,
     path = "/home/balder/.local/share/nvim/site/pack/packer/start/LuaSnip",

@@ -91,6 +91,7 @@ return require('packer').startup(function(use)
     }
 
     -- More language Plugins
+    use { 'autozimu/LanguageClient-neovim' } -- rust
     use 'simrat39/rust-tools.nvim' -- rust
     use 'dart-lang/dart-vim-plugin' -- Dart
     use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' } -- Flutter
