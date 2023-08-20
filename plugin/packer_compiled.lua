@@ -149,16 +149,6 @@ _G.packer_plugins = {
     path = "/home/balder/.local/share/nvim/site/pack/packer/start/markid",
     url = "https://github.com/David-Kunz/markid"
   },
-  ["mason-lspconfig.nvim"] = {
-    loaded = true,
-    path = "/home/balder/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
-    url = "https://github.com/williamboman/mason-lspconfig.nvim"
-  },
-  ["mason.nvim"] = {
-    loaded = true,
-    path = "/home/balder/.local/share/nvim/site/pack/packer/start/mason.nvim",
-    url = "https://github.com/williamboman/mason.nvim"
-  },
   ["mdeval.nvim"] = {
     loaded = true,
     path = "/home/balder/.local/share/nvim/site/pack/packer/start/mdeval.nvim",
