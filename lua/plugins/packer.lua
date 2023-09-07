@@ -31,6 +31,9 @@ return require('packer').startup(function(use)
     use { 'Everblush/everblush.nvim', as = 'everblush' }
     use { 'rose-pine/neovim', as = 'rose-pine' }
 
+    -- My plugins
+    use 'BalderHolst/matlab.nvim'
+
     -- Misc
     use 'tpope/vim-commentary' -- comment out lines with gcc and gc
     use 'windwp/nvim-autopairs' -- Autopairs, integrates with both cmp and treesitter
