@@ -1,4 +1,4 @@
-local matlab = require("myscripts.matlab.matlab")
+local matlab = require("matlab")
 local runner = require("myscripts.runner")
 
 vim.keymap.set("n", "Å", function () runner.main_action() end)

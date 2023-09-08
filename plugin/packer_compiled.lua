@@ -149,6 +149,11 @@ _G.packer_plugins = {
     path = "/home/balder/.local/share/nvim/site/pack/packer/start/markid",
     url = "https://github.com/David-Kunz/markid"
   },
+  ["matlab.nvim"] = {
+    loaded = true,
+    path = "/home/balder/.local/share/nvim/site/pack/packer/start/matlab.nvim",
+    url = "https://github.com/BalderHolst/matlab.nvim"
+  },
   ["mdeval.nvim"] = {
     loaded = true,
     path = "/home/balder/.local/share/nvim/site/pack/packer/start/mdeval.nvim",

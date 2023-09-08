@@ -1,4 +1,4 @@
-local matlab = require("matlab")
+local matlab = require("plugins.matlab")
 
 vim.keymap.set("v", "m", function () matlab.visual_evaluate() end)
 vim.keymap.set("n", "<leader>e", function () matlab.open_variable_explorer() end)
