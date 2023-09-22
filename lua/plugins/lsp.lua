@@ -3,9 +3,7 @@ local lspconfig = require("lspconfig")
 
 lsp.preset("recommended")
 
-lsp.ensure_installed({
-    'rust_analyzer',
-})
+lsp.ensure_installed({ })
 
 local on_attach = function(client)
     require'completion'.on_attach(client)
@@ -45,15 +43,15 @@ lsp.configure('lua_ls', {
 })
 
 
--- lsp.configure('pyright', {
---     settings = {
---         python = {
---             analysis = {
---                 typeCheckingMode = "off"
---             }
---         }
---     },
--- })
+lsp.configure('pyright', {
+    settings = {
+        python = {
+            analysis = {
+                typeCheckingMode = "off"
+            }
+        }
+    },
+})
 
 
 local cmp = require('cmp')
