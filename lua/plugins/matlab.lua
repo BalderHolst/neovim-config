@@ -3,11 +3,12 @@ matlab.setup({
     matlab_path = "matlab",
     open_window = require("matlab.openers").vsplit,
     splash = false,
-    matlab_flags = {},
-
 })
 
 vim.keymap.set("v", "m", function () matlab.visual_evaluate() end)
+vim.keymap.set("n", "<f1>", function () matlab.open_documentation_at_cursor() end)
 vim.keymap.set("n", "<leader>me", function () matlab.open_variable_explorer() end)
 vim.keymap.set("n", "<leader>mq", function () matlab.close() end)
 vim.keymap.set("n", "<leader><cr>", function () matlab.evaluate_current_file() end)
+
+return matlab
