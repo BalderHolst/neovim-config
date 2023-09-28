@@ -194,6 +194,11 @@ _G.packer_plugins = {
     path = "/home/balder/.local/share/nvim/site/pack/packer/start/nvim-markdown",
     url = "https://github.com/ixru/nvim-markdown"
   },
+  ["nvim-spectre"] = {
+    loaded = true,
+    path = "/home/balder/.local/share/nvim/site/pack/packer/start/nvim-spectre",
+    url = "https://github.com/nvim-pack/nvim-spectre"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/balder/.local/share/nvim/site/pack/packer/start/nvim-treesitter",

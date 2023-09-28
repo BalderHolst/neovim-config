@@ -44,6 +44,7 @@ return require('packer').startup(function(use)
     use 'epwalsh/obsidian.nvim' -- Obsidian notes
     use 'RRethy/nvim-align' -- align things
     use 'mg979/vim-visual-multi' -- multi-cursor
+    use 'nvim-pack/nvim-spectre' -- large search & replace
     -- use 'hkupty/iron.nvim'
     -- use 'theprimeagen/harpoon'
     -- use 'junegunn/goyo.vim' -- Center and hide tui
