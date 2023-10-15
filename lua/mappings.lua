@@ -18,12 +18,6 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
--- Splits
-map('n', '<c-l>', '<c-w>l', opts)
-map('n', '<c-h>', '<c-w>h', opts)
-map('n', '<c-j>', '<c-w>j', opts)
-map('n', '<c-k>', '<c-w>k', opts)
-
 -- Terminal
 vim.keymap.set('n', '<leader>t', function() vim.fn.jobstart("kitty --detach") end) -- open terminal
 map('t', '<Esc>', '<C-\\><C-n>', opts)
@@ -42,8 +36,7 @@ vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>zz")
 map('n', '<C-q>', ':cclose<cr>', opts)
 
 -- leaders
-vim.keymap.set('n', '<leader>f', vim.lsp.buf.format)
--- vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+vim.keymap.set('n', '<leader>F', vim.lsp.buf.format)
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
