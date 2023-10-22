@@ -7,9 +7,7 @@ if not snip_status_ok then
 	return
 end
 
-
-local luasnip = require("luasnip")
-vim.keymap.set('i', '<M-l>', function()
+vim.keymap.set({'i', 'n', 'v'}, '<M-l>', function()
     if luasnip.jumpable(1) then
         luasnip.jump(1)
     end
