@@ -1,7 +1,3 @@
-local o = vim.o
-local bo = vim.bo
-local wo = vim.wo
-
 local cmd = vim.cmd
 
 
@@ -13,7 +9,7 @@ vim.opt.undofile = true
 -- Global options
 vim.opt.laststatus = 3 -- global status line
 
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
