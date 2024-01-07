@@ -1,4 +1,8 @@
--- https://github.com/folke/tokyonight.nvim
-vim.g.tokyonight_style = "night"
-vim.g.tokyonight_transparent = false
-vim.cmd.colorscheme("tokyonight-night")
+return {
+    'folke/tokyonight.nvim',
+    config = function ()
+        vim.g.tokyonight_style = "night"
+        vim.g.tokyonight_transparent = false
+        vim.cmd.colorscheme("tokyonight-night")
+    end
+}

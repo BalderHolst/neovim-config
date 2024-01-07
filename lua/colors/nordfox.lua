@@ -1,8 +1,14 @@
-require('nightfox').setup({
-    options = {
-        transparent = false,
-    }
-})
+return  {
+    "EdenEast/nightfox.nvim",
+    config = function ()
 
+        require('nightfox').setup({
+            options = {
+                transparent = false,
+            }
+        })
 
-vim.cmd("colorscheme duskfox")
+        vim.cmd("colorscheme duskfox")
+
+    end
+}

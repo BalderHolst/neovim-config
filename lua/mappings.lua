@@ -6,6 +6,11 @@ local opts = { noremap = true, silent = true }
 -- other
 map('n', "<C-n>", ':noh<cr>', opts)
 
+vim.cmd(":command WQ wq")
+vim.cmd(":command Wq wq")
+vim.cmd(":command W w")
+vim.cmd(":command Q q")
+
 -- Spelling
 map('n', '<leader>d', ':set spell! spelllang=da<CR>', opts)
 map('n', '<leader>e', ':set spell! spelllang=En<CR>', opts)
@@ -37,9 +42,7 @@ map('n', '<C-q>', ':cclose<cr>', opts)
 
 -- leaders
 vim.keymap.set('n', '<leader>F', vim.lsp.buf.format)
-
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 
