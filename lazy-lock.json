@@ -8,6 +8,7 @@
   "everblush.nvim": { "branch": "main", "commit": "9a0e695fdd57b340d3ba2b72406e3ca519029f25" },
   "friendly-snippets": { "branch": "main", "commit": "53d3df271d031c405255e99410628c26a8f0d2b0" },
   "gitsigns.nvim": { "branch": "main", "commit": "3e6e91b09f0468c32d3b96dcacf4b947f037ce25" },
+  "harpoon": { "branch": "master", "commit": "ccae1b9bec717ae284906b0bf83d720e59d12b91" },
   "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
   "matlab.nvim": { "branch": "main", "commit": "9d4b4138496da97031b1c7936c26a6ad14269015" },
   "mdeval.nvim": { "branch": "master", "commit": "2c32e2f3e7d8f222e7a4724989f218d036e1081d" },

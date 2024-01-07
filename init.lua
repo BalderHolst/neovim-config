@@ -14,13 +14,13 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+local lazy_opts = { change_detection = { enabled = false } }
+
 require("lazy").setup({
     spec = {
         { import = "plugins" },
         { import = "colors.everblush" },
     },
-    {
-        change_detection = { enabled = false }
-    }
+    lazy_opts
 })
 
