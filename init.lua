@@ -19,7 +19,7 @@ local lazy_opts = { change_detection = { enabled = false } }
 require("lazy").setup({
     spec = {
         { import = "plugins" },
-        { import = "colors.sonokai" },
+        { import = "colors.tokyonight" },
     },
     lazy_opts
 })

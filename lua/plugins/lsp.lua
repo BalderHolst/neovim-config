@@ -1,34 +1,35 @@
 return {
     {
         'neovim/nvim-lspconfig',
+        dependencies = { 'simrat39/inlay-hints.nvim' },
         config = function()
             local lspconfig = require("lspconfig")
 
-            -- local on_attach = function(client)
-            --     require'completion'.on_attach(client)
-            -- end
+            local on_attach = function(client, buf)
+                require'completion'.on_attach(client)
+            end
 
-            -- lspconfig.rust_analyzer.setup({
-            --     on_attach=on_attach,
-            --     settings = {
-            --         ["rust-analyzer"] = {
-            --             imports = {
-            --                 granularity = {
-            --                     group = "module",
-            --                 },
-            --                 prefix = "self",
-            --             },
-            --             cargo = {
-            --                 buildScripts = {
-            --                     enable = true,
-            --                 },
-            --             },
-            --             procMacro = {
-            --                 enable = true
-            --             },
-            --         }
-            --     }
-            -- })
+            lspconfig.rust_analyzer.setup({
+                on_attach=on_attach,
+                settings = {
+                    ["rust-analyzer"] = {
+                        imports = {
+                            granularity = {
+                                group = "module",
+                            },
+                            prefix = "self",
+                        },
+                        cargo = {
+                            buildScripts = {
+                                enable = true,
+                            },
+                        },
+                        procMacro = {
+                            enable = true
+                        },
+                    }
+                }
+            })
 
             lspconfig.lua_ls.setup({
                 settings = {
@@ -63,6 +64,10 @@ return {
                     -- Enable completion triggered by <c-x><c-o>
                     vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
 
+                    local lsp_id = ev.data.client_id
+                    local lsp = vim.lsp.get_client_by_id(lsp_id)
+
+
                     -- Buffer local mappings.
                     -- See `:help vim.lsp.*` for documentation on any of the below functions
                     local opts = { buffer = ev.buf }
@@ -76,8 +81,15 @@ return {
                     vim.keymap.set('n', '<space>F', function()
                         vim.lsp.buf.format { async = true }
                     end, opts)
+
+                    if lsp.name == "rust-analyzer" then
+                        print("Setting up rust")
+                        vim.keymap.set("n", "<leader>a", function() vim.cmd.RustLsp('codeAction') end, opts)
+                    end
                 end,
             })
+
+
 
             vim.diagnostic.config({
                 virtual_text = true,
