@@ -1,6 +1,5 @@
 local cmd = vim.cmd
 
-
 vim.g.mapleader = ' '
 
 -- nvim options
@@ -20,23 +19,13 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
--- vim.opt.colorcolumn = "80"
-
--- o.syntax = true -- enable syntax highlighting
-
 vim.opt.mouse = "a" -- enable mouse
 vim.opt.splitbelow = true
 vim.opt.splitright = true
--- vim.opt.clipboard = "unnamedplus" -- use system clipboard
 vim.opt.number = true -- enable numbering
 
 vim.opt.smarttab = true
 vim.opt.smartindent = true
-
--- netrw
-vim.g.netrw_browse_split = 0
-vim.g.netrw_banner = 0
-vim.g.netrw_winsize = 25
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
