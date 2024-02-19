@@ -7,10 +7,13 @@ return {
             'hrsh7th/cmp-nvim-lsp', -- LSP completions
             'hrsh7th/cmp-nvim-lua', -- vim type in lua config
             'saadparwaiz1/cmp_luasnip', -- snippet completion
+            "zbirenbaum/copilot-cmp", -- copilot suggetsions
             'L3MON4D3/LuaSnip',
         },
         config = function()
             local cmp = require("cmp")
+
+            require("copilot_cmp").setup({})
 
             local snip_status_ok, luasnip = pcall(require, "luasnip")
             if not snip_status_ok then
@@ -51,6 +54,7 @@ return {
                 Event = "",
                 Operator = "",
                 TypeParameter = "",
+                Copilot = " ",
             }
 
             cmp.setup {
@@ -109,6 +113,7 @@ return {
                     -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
                     vim_item.menu = ({
                         nvim_lsp = "[LSP]",
+                        copilot = "[Copilot]",
                         luasnip = "[Snippet]",
                         buffer = "[Buffer]",
                         path = "[Path]",
@@ -117,6 +122,7 @@ return {
                 end,
             },
             sources = {
+                { name = "copilot" },
                 { name = "nvim_lsp" },
                 { name = "luasnip" },
                 { name = "buffer" },

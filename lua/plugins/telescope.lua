@@ -1,13 +1,13 @@
 return {
-    { -- native fuzzy finder for telescope (better, faster, stronger!)
-        'nvim-telescope/telescope-fzf-native.nvim',
-        build = 'make'
-    },
 
     { -- main telescope
         'nvim-telescope/telescope.nvim',
         dependencies = {
             "nvim-tree/nvim-web-devicons",
+            { -- native fuzzy finder for telescope (better, faster, stronger!)
+                'nvim-telescope/telescope-fzf-native.nvim',
+                build = 'make'
+            },
         },
         config = function()
 
