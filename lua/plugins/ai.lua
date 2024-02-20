@@ -4,7 +4,7 @@ return {
         require('copilot').setup({
             panel = {
                 enabled = true,
-                auto_refresh = false,
+                auto_refresh = true,
                 keymap = {
                     jump_prev = "[[",
                     jump_next = "]]",
@@ -19,10 +19,10 @@ return {
             },
             suggestion = {
                 enabled = true,
-                auto_trigger = false,
+                auto_trigger = true,
                 debounce = 75,
                 keymap = {
-                    accept = "<M-l>",
+                    accept = "<CR>",
                     accept_word = false,
                     accept_line = false,
                     next = "<M-]>",
@@ -34,9 +34,9 @@ return {
                 yaml = false,
                 markdown = false,
                 help = false,
-                gitcommit = false,
-                gitrebase = false,
-                hgcommit = false,
+                gitcommit = true,
+                gitrebase = true,
+                hgcommit = true,
                 svn = false,
                 cvs = false,
                 ["."] = false,
