@@ -1,6 +1,16 @@
 return {
     "zbirenbaum/copilot.lua",
     config = function()
+
+        -- Close completions popup if 'cmp' is loaded
+        local cmp_ok, cmp= pcall(require, "cmp")
+        local close_cmp = function ()
+            if not cmp_ok then
+                return
+            end
+            cmp.close()
+        end
+
         require('copilot').setup({
             panel = {
                 enabled = true,
@@ -19,7 +29,7 @@ return {
             },
             suggestion = {
                 enabled = true,
-                auto_trigger = true,
+                auto_trigger = false,
                 debounce = 75,
                 keymap = {
                     accept = "<M-y>",
@@ -44,5 +54,13 @@ return {
             copilot_node_command = 'node', -- Node.js version must be > 18.x
             server_opts_overrides = {},
         })
+        vim.keymap.set('i', '<M-n>', function ()
+            close_cmp()
+            require("copilot.suggestion").next()
+        end)
+        vim.keymap.set('i', '<M-p>', function ()
+            close_cmp()
+            require("copilot.suggestion").next()
+        end)
     end
 }
