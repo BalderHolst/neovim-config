@@ -127,7 +127,7 @@ return {
                     { name = "luasnip" },
                     { name = "nvim_lsp" },
                     { name = "nvim_lua" },
-                    { name = 'spell', option = spell_opts },
+                    -- { name = 'spell', option = spell_opts },
                     { name = "path" },
                     { name = "buffer" },
                     { name = "calc" },

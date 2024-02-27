@@ -5,10 +5,11 @@ return {
         config = function()
             local lspconfig = require("lspconfig")
 
-            local on_attach = function(client, buf)
+            local on_attach = function(client, _)
                 require'completion'.on_attach(client)
             end
 
+            ---------- Rust ----------
             lspconfig.rust_analyzer.setup({
                 on_attach=on_attach,
                 settings = {
@@ -31,6 +32,7 @@ return {
                 }
             })
 
+            ---------- Lua ----------
             lspconfig.lua_ls.setup({
                 settings = {
                     Lua = {
@@ -41,6 +43,7 @@ return {
                 }
             })
 
+            ---------- Python ----------
             lspconfig.pyright.setup({
                 settings = {
                     python = {
@@ -49,6 +52,13 @@ return {
                         }
                     }
                 },
+            })
+
+            ---------- VHDL ----------
+            lspconfig.vhdl_ls.setup({
+                cmd = { "/home/balder/projects/rust_hdl/target/release/vhdl_ls" },
+                filetypes = { "vhd", "vhdl" },
+                single_file_support = true,
             })
 
             lspconfig.clangd.setup({})
