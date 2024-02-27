@@ -18,18 +18,18 @@ return {
                 keymap = {
                     jump_prev = "[[",
                     jump_next = "]]",
-                    accept = "<CR>",
+                    accept = "<M-CR>",
                     refresh = "gr",
                     open = "<M-CR>"
                 },
                 layout = {
-                    position = "bottom", -- | top | left | right
+                    position = "right", -- | top | left | right
                     ratio = 0.4
                 },
             },
             suggestion = {
                 enabled = true,
-                auto_trigger = false,
+                auto_trigger = true,
                 debounce = 75,
                 keymap = {
                     accept = "<M-y>",
@@ -54,6 +54,10 @@ return {
             copilot_node_command = 'node', -- Node.js version must be > 18.x
             server_opts_overrides = {},
         })
+        vim.keymap.set('i', '<M-c>', function ()
+            close_cmp()
+        end)
+        vim.help.
         vim.keymap.set('i', '<M-n>', function ()
             close_cmp()
             require("copilot.suggestion").next()
