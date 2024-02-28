@@ -19,6 +19,7 @@
   "lualine.nvim": { "branch": "master", "commit": "7d131a8d3ba5016229e8a1d08bf8782acea98852" },
   "matlab.nvim": { "branch": "main", "commit": "ab397340bc98bc2049a0dac22c9f0176facf71aa" },
   "mdeval.nvim": { "branch": "master", "commit": "2c32e2f3e7d8f222e7a4724989f218d036e1081d" },
+  "mini.align": { "branch": "main", "commit": "f845218c5fea89e49074e48270dc5e1b9511a0f9" },
   "nvim-cmp": { "branch": "main", "commit": "04e0ca376d6abdbfc8b52180f8ea236cbfddf782" },
   "nvim-dap": { "branch": "master", "commit": "fc880e82059eb21c0fa896be60146e5f17680648" },
   "nvim-dap-projects": { "branch": "main", "commit": "f319ffd99c6c8a0b930bcfc4bee0c751ffbf5808" },
