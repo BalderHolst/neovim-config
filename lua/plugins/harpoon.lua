@@ -3,7 +3,7 @@ return {
     dependencies = {'nvim-lua/plenary.nvim'},
     config = function ()
         vim.keymap.set('n', '<M-m>', function()
-            print("Harpooned!")
+            vim.notify("Harpooned!")
             require("harpoon.mark").add_file()
         end)
         vim.keymap.set('n', '<M-h>', function() require("harpoon.ui").toggle_quick_menu() end)
