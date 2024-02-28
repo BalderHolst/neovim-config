@@ -23,17 +23,27 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
+-- Undo
+vim.keymap.set('n', 'U', '<C-r>')
+
+-- Play @q macro
+vim.keymap.set('n', 'Q', '@q')
+
+-- Better indenting
+vim.keymap.set('v', '<', '<gv')
+vim.keymap.set('v', '>', '>gv')
+vim.keymap.set('n', '<', '<<')
+vim.keymap.set('n', '>', '>>')
+
 -- Terminal
 vim.keymap.set('n', '<leader>t', function() vim.fn.jobstart("kitty --detach") end) -- open terminal
 map('t', '<Esc>', '<C-\\><C-n>', opts)
 
--- greatest remap ever
--- vim.keymap.set("x", "<leader>p", [["_dP]])
+-- System clipboard
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
-vim.keymap.set({"n", "v"}, "<leader>p", [["+p]])
+vim.keymap.set({ "n", "v" }, "<leader>p", [["+p]])
 vim.keymap.set("n", "<leader>P", [["+P]])
-
 
 -- Quickfix
 vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zz")
@@ -44,8 +54,3 @@ map('n', '<C-q>', ':cclose<cr>', opts)
 vim.keymap.set('n', '<leader>F', vim.lsp.buf.format)
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
-
-
-
--- Other Plugins
--- map('n', '<leader>f', ':Goyo | set linebreak <cr> | :e<cr>', opts)

@@ -29,10 +29,10 @@ return {
                 incremental_selection = {
                     enable = true,
                     keymaps = {
-                        init_selection = "<CR>",
-                        node_incremental = "<CR>",
+                        init_selection = "+",
+                        node_incremental = "+",
                         scope_incremental = nil,
-                        node_decremental = "<BS>",
+                        node_decremental = "-",
                     },
                 },
 
