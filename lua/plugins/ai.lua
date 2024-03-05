@@ -57,7 +57,6 @@ return {
         vim.keymap.set('i', '<M-c>', function ()
             close_cmp()
         end)
-        vim.help.
         vim.keymap.set('i', '<M-n>', function ()
             close_cmp()
             require("copilot.suggestion").next()
