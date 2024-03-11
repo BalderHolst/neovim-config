@@ -4,7 +4,7 @@ return {
     config = function ()
 
         local trouble = require("trouble")
-        local trouble_opts = {skip_groups = true, jump = true}
+        local trouble_opts = {skip_groups = false, jump = true}
 
         local qf_is_open = function()
             return vim.fn.empty(vim.fn.getqflist()) == 0
