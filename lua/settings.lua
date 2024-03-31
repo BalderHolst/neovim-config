@@ -39,6 +39,15 @@ vim.opt.relativenumber = true
 
 vim.opt.wrap = false
 
+vim.opt.list = true
+vim.opt.listchars = {
+    tab = "» ",
+    extends = "›",
+    precedes = "‹",
+    trail = "•",
+    nbsp = "␣",
+}
+
 cmd('au InsertEnter * norm zz')
 
 
