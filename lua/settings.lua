@@ -1,4 +1,6 @@
 local cmd = vim.cmd
+local autocmd = vim.api.nvim_create_autocmd
+local augroup = vim.api.nvim_create_augroup
 
 vim.g.mapleader = ' '
 
@@ -51,8 +53,18 @@ vim.opt.listchars = {
 cmd('au InsertEnter * norm zz')
 
 
+-- Stop newline continution of comments
+local general = augroup("General", { clear = true })
+autocmd("BufEnter", {
+  callback = function()
+    vim.opt.formatoptions:remove { "c", "r", "o" }
+  end,
+  group = general,
+  desc = "Disable New Line Comment",
+})
+
 -- Filetypes
-vim.api.nvim_create_autocmd("BufWinEnter", { pattern = "*.dart" , command = "set filetype=dart" })
+autocmd("BufWinEnter", { pattern = "*.dart" , command = "set filetype=dart" })
 
 vim.g.markdown_fenced_languages = {'python', 'cpp'} -- enable highlighting for these languages in markdown files.
 
