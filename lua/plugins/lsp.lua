@@ -6,31 +6,10 @@ return {
             local lspconfig = require("lspconfig")
 
             local on_attach = function(client, _)
-                require'completion'.on_attach(client)
+                require 'completion'.on_attach(client)
             end
 
-            ---------- Rust ----------
-            lspconfig.rust_analyzer.setup({
-                on_attach=on_attach,
-                settings = {
-                    ["rust-analyzer"] = {
-                        imports = {
-                            granularity = {
-                                group = "module",
-                            },
-                            prefix = "self",
-                        },
-                        cargo = {
-                            buildScripts = {
-                                enable = true,
-                            },
-                        },
-                        procMacro = {
-                            enable = true
-                        },
-                    }
-                }
-            })
+            -- NOTE: Rust is configured by rust-tools.nvim
 
             ---------- Lua ----------
             lspconfig.lua_ls.setup({
@@ -61,7 +40,11 @@ return {
                 single_file_support = true,
             })
 
-            lspconfig.clangd.setup({})
+            ------- JavaScript ------
+            require'lspconfig'.biome.setup{}
+
+
+            -- lspconfig.clangd.setup({})
 
             vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
             vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)

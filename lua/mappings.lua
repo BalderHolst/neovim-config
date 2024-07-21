@@ -16,10 +16,10 @@ map('n', '<leader>d', ':set spell! spelllang=da<CR>', opts)
 map('n', '<leader>e', ':set spell! spelllang=En<CR>', opts)
 
 -- Move highlighted lines
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("x", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("x", "J", ":m '>+1<CR>gv=gv")
 
--- Center cursor when scroling
+-- Center cursor when scrolling
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
@@ -42,6 +42,8 @@ map('t', '<Esc>', '<C-\\><C-n>', opts)
 -- System clipboard
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
+vim.keymap.set({ "n", "v" }, "<leader>d", [["+d]])
+vim.keymap.set("n", "<leader>D", [["+D]])
 vim.keymap.set({ "n", "v" }, "<leader>p", [["+p]])
 vim.keymap.set("n", "<leader>P", [["+P]])
 

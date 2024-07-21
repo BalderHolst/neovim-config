@@ -191,16 +191,37 @@ return {
                         vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
                     end,
                     settings = {
-                        cargo = {
-                            buildScripts = {
+                        ["rust-analyzer"] = {
+                            cargo = {
+                                allFeatures = true,
+                                loadOutDirsFromCheck = true,
+                                runBuildScripts = true,
+                                features = { "ssr" },
+                            },
+                            -- Add clippy lints for Rust.
+                            -- checkOnSave = {
+                            --     allFeatures = true,
+                            --     command = "clippy",
+                            --     extraArgs = {
+                            --         "--",
+                            --         "--no-deps",
+                            --         "-Dclippy::correctness",
+                            --         "-Dclippy::complexity",
+                            --         "-Wclippy::perf",
+                            --         "-Wclippy::pedantic",
+                            --     },
+                            -- },
+                            procMacro = {
                                 enable = true,
+                                ignored = {
+                                    ["async-trait"] = { "async_trait" },
+                                    ["napi-derive"] = { "napi" },
+                                    ["async-recursion"] = { "async_recursion" },
+                                },
                             },
                         },
-                        procMacro = {
-                            enable = true
-                        },
-                    }
-                }, -- rust-analyzer options
+                    },
+                },
 
                 -- debugging stuff
                 dap = {

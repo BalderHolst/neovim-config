@@ -130,8 +130,9 @@ return {
                     { name = "nvim_lua" },
                     -- { name = 'spell', option = spell_opts },
                     { name = "path" },
-                    { name = "buffer" },
+                    -- { name = "buffer" },
                     { name = "calc" },
+                    { name = "otter" },
                 },
                 window = {
                     -- completion = cmp.config.window.bordered(),
