@@ -26,7 +26,7 @@ return {
             },
 
             -- Whether to disable showing non-error feedback
-            silent = false,
+            silent = true,
         })
     end
 }
