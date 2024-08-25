@@ -33,6 +33,7 @@ return {
                 f()
             else
                 trouble.open()
+                vim.cmd("wincmd p") -- move to the previous window
             end
         end
 

@@ -10,7 +10,7 @@ vim.opt.undofile = true
 -- Global options
 vim.opt.laststatus = 3 -- global status line
 
-vim.opt.hlsearch = true
+vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
