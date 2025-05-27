@@ -14,7 +14,7 @@ return
                 "json",
                 "nix",
             },
-            sync_install = false,
+            sync_install = true,
             auto_install = true,
 
             highlight = {

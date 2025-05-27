@@ -1,0 +1,7 @@
+ Config: matlab_ls
+ 	filetypes:         matlab
+ 	root directory:    Not found.
+ 	cmd:               /home/balder/.nix-profile/bin/matlab-language-server --stdio
+ 	cmd is executable: true
+ 	autostart:         true
+ 	custom handlers:   

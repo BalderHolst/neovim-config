@@ -4,6 +4,8 @@ local augroup = vim.api.nvim_create_augroup
 
 vim.g.mapleader = ' '
 
+vim.g.netrw_browsex_viewer = "firefox"
+
 -- nvim options
 vim.opt.undofile = true
 

@@ -24,8 +24,3 @@ local same = function (index)
 		end, { index })
 end
 
-return {
-	parse("freja", "freja er sød!"),
-	parse("fMs", "freja er MEGET sød"),
-}
-

@@ -5,10 +5,6 @@ return {
         config = function()
             local lspconfig = require("lspconfig")
 
-            local on_attach = function(client, _)
-                require 'completion'.on_attach(client)
-            end
-
             -- NOTE: Rust is configured by rust-tools.nvim
 
             ---------- Lua ----------
@@ -33,6 +29,9 @@ return {
                 },
             })
 
+            ---------- Nix ----------
+            require'lspconfig'.nixd.setup{}
+
             ---------- VHDL ----------
             lspconfig.vhdl_ls.setup({
                 cmd = { "/home/balder/projects/rust_hdl/target/release/vhdl_ls" },
@@ -40,19 +39,30 @@ return {
                 single_file_support = true,
             })
 
+            ---------- Matlab ----------
+            require("lspconfig")["matlab_ls"].setup {
+                capabilities = require("cmp_nvim_lsp").default_capabilities(),
+                settings = {
+                    MATLAB = {
+                        indexWorkspace = true,
+                        installPath = "/home/balder/.matlab/R2023b",
+                        matlabConnectionTiming = "onStart",
+                        telemetry = true,
+                    },
+                },
+            }
+
             ------- JavaScript ------
             require'lspconfig'.biome.setup{}
 
 
-            -- lspconfig.clangd.setup({})
+            lspconfig.clangd.setup({})
 
             vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
             vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
             vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
             vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
 
-            -- Use LspAttach autocommand to only map the following keys
-            -- after the language server attaches to the current buffer
             vim.api.nvim_create_autocmd('LspAttach', {
                 group = vim.api.nvim_create_augroup('UserLspConfig', {}),
                 callback = function(ev)
@@ -84,11 +94,10 @@ return {
                 end,
             })
 
-
-
             vim.diagnostic.config({
                 virtual_text = true,
             })
+
         end,
     },
 }

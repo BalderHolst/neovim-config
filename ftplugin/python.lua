@@ -10,7 +10,7 @@ local opts = { noremap = true }
 
 
 -- mappings
-map('n', 'å', ':w | !python %<cr>', opts) -- run
+map('n', 'å', ':w | !python "%"<cr>', opts) -- run
 
 
 -- autocmd
