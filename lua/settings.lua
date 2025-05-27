@@ -52,8 +52,6 @@ vim.opt.listchars = {
     nbsp = "␣",
 }
 
-cmd('au InsertEnter * norm zz')
-
 
 -- Stop newline continution of comments
 local general = augroup("General", { clear = true })

@@ -15,7 +15,6 @@ wo.linebreak = true
 map('n', 'j', 'gj', opts)
 map('n', 'k', 'gk', opts)
 
--- map('n', 'å', ':w | !blatex compile<cr>', opts)
 map('n', 'å', ':w | !blatex compile<cr>', opts)
 
 
