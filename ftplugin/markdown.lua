@@ -24,3 +24,4 @@ map('n', 'k', 'gk', opts)
 
 -- plugins
 vim.keymap.set('n', 'å', function() require("mdeval").eval_code_block() end)
+vim.keymap.set('n', 'Å', ":MarkdownPreview<CR>", {silent = true})
